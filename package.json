@@ -1,6 +1,6 @@
 {
   "name": "@uiw/babel-plugin-add-import-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Remove the specified import declaration when you use the babel transform to build the package.",
   "repository": "https://github.com/uiwjs/babel-plugin-add-import-extension",
   "homepage": "https://uiwjs.github.io/babel-plugin-add-import-extension/",
