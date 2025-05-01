@@ -43,17 +43,17 @@ jobs:
 
     - run: cp -rp coverage/lcov-report dist
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
-
     - name: Create Tag
       id: create_tag
       uses: jaywcjlove/create-tag-action@main
       with:
         package-path: ./package.json
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
 
     - name: Generate Changelog
       id: changelog
@@ -64,14 +64,11 @@ jobs:
         filter-author: (小弟调调™|Renovate Bot)
         filter: '[R|r]elease[d]\s+[v|V]\d(\.\d+){0,2}'
 
-    - name: Create Release
-      uses: ncipollo/release-action@v1
-      if: steps.create_tag.outputs.successful
+    - name: Create Released Tag
+      uses: jaywcjlove/create-tag-action@main
       with:
-        allowUpdates: true
-        token: ${{ secrets.GITHUB_TOKEN }}
-        name: ${{ steps.create_tag.outputs.version }}
-        tag: ${{ steps.create_tag.outputs.version }}
+        version: ${{ steps.create_tag.outputs.version }}
+        release: true
         body: |
           [![](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uiw/babel-plugin-add-import-extension@${{steps.create_tag.outputs.versionNumber}}/file/README.md) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/babel-plugin-transform-remove-imports)](https://bundlephobia.com/result?p=babel-plugin-transform-remove-imports@${{steps.create_tag.outputs.versionNumber}})
           
