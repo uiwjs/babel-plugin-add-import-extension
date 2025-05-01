@@ -1,0 +1,1 @@
+https://uiwjs.github.io/babel-plugin-add-import-extension/index.html
