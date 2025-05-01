@@ -5,7 +5,7 @@
 [![NPM version](https://img.shields.io/npm/v/@uiw/babel-plugin-add-import-extension.svg?style=flat)](https://npmjs.org/package/@uiw/babel-plugin-add-import-extension)
 [![CI](https://github.com/uiwjs/babel-plugin-add-import-extension/actions/workflows/ci.yml/badge.svg)](https://github.com/uiwjs/babel-plugin-add-import-extension/actions/workflows/ci.yml)
 [![Coverage Status](https://uiwjs.github.io/babel-plugin-add-import-extension/badges.svg)](https://uiwjs.github.io/babel-plugin-add-import-extension/lcov-report)
-[![Downloadss](https://img.shields.io/npm/dm/babel-plugin-add-import-extension.svg?style=flat)](https://npmjs.org/package/babel-plugin-add-import-extension)
+[![Downloadss](https://img.shields.io/npm/dm/@uiw/babel-plugin-add-import-extension.svg?style=flat)](https://npmjs.org/package/@uiw/babel-plugin-add-import-extension)
 [![Repo Dependents](https://badgen.net/github/dependents-repo/uiwjs/babel-plugin-add-import-extension)](https://github.com/uiwjs/babel-plugin-add-import-extension/network/dependents)
 
 A plugin to add extensions to import and export declarations, is very useful when you use Typescript with Babel and don't want to explicity import or export module with extensions.
