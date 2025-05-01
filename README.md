@@ -29,8 +29,25 @@ Via `.babelrc` or `babel-loader`.
       "@uiw/babel-plugin-add-import-extension", {
         // Add .js extension to all imports and exports
         "extension": "js",
-        // Control with a boolean value, default to not processing files that already have an extension
-        "skipExistingExtensions": true,
+        // By default, if a declaration file already has an extension, it is preserved. Extensions are added to declaration files that do not have one.
+        "replace": true,
+        // If set to `true` and a declaration file has an extension that is *not* included in the `observedScriptExtensions` list, the file will be skipped.
+        "skipUnlistedExtensions": true,
+        // Declaration files with extensions present in this list are considered for extension replacement (based on the `replace` option).
+        // Files with extensions *not* in this list will have the `extension` option's value appended to them.
+        "observedScriptExtensions": ["js", "ts", "jsx", "tsx", "mjs", "cjs"]
+      }
+    ]
+  ]
+}
+```
+
+```json
+{
+  "plugins": [
+    [
+      "@uiw/babel-plugin-add-import-extension", {
+        "extension": "js"
       }
     ]
   ]
