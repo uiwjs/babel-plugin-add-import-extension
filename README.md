@@ -157,8 +157,8 @@ What this plugin does is to check all imported modules and if your module is not
 
 As always, thanks to our amazing contributors!
 
-<a href="https://github.com/uiwjs/babel-plugin-transform-remove-imports/graphs/contributors">
-  <img src="https://uiwjs.github.io/babel-plugin-transform-remove-imports/CONTRIBUTORS.svg" />
+<a href="https://github.com/uiwjs/babel-plugin-add-import-extension/graphs/contributors">
+  <img src="https://uiwjs.github.io/babel-plugin-add-import-extension/CONTRIBUTORS.svg" />
 </a>
 
 Made with [github-action-contributors](https://github.com/jaywcjlove/github-action-contributors).
