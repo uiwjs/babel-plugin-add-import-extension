@@ -1,0 +1,1 @@
+import png from './logo.png';
