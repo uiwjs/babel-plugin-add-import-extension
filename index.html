@@ -61,31 +61,21 @@
 </span><span class="code-line line-number" line="2">  <span class="token property">"plugins"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 </span><span class="code-line line-number" line="3">    <span class="token punctuation">[</span>
 </span><span class="code-line line-number" line="4">      <span class="token string">"@uiw/babel-plugin-add-import-extension"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-</span><span class="code-line line-number" line="5">        <span class="token comment">// Add .js extension to all imports and exports</span>
-</span><span class="code-line line-number" line="6">        <span class="token property">"extension"</span><span class="token operator">:</span> <span class="token string">"js"</span><span class="token punctuation">,</span>
-</span><span class="code-line line-number" line="7">        <span class="token comment">// By default, if a declaration file already has an extension, it is preserved. Extensions are added to declaration files that do not have one.</span>
-</span><span class="code-line line-number" line="8">        <span class="token property">"replace"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-</span><span class="code-line line-number" line="9">        <span class="token comment">// If set to `true` and a declaration file has an extension that is *not* included in the `observedScriptExtensions` list, the file will be skipped.</span>
-</span><span class="code-line line-number" line="10">        <span class="token property">"skipUnlistedExtensions"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-</span><span class="code-line line-number" line="11">        <span class="token comment">// Declaration files with extensions present in this list are considered for extension replacement (based on the `replace` option).</span>
-</span><span class="code-line line-number" line="12">        <span class="token comment">// Files with extensions *not* in this list will have the `extension` option's value appended to them.</span>
-</span><span class="code-line line-number" line="13">        <span class="token property">"observedScriptExtensions"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"js"</span><span class="token punctuation">,</span> <span class="token string">"ts"</span><span class="token punctuation">,</span> <span class="token string">"jsx"</span><span class="token punctuation">,</span> <span class="token string">"tsx"</span><span class="token punctuation">,</span> <span class="token string">"mjs"</span><span class="token punctuation">,</span> <span class="token string">"cjs"</span><span class="token punctuation">]</span>
-</span><span class="code-line line-number" line="14">      <span class="token punctuation">}</span>
-</span><span class="code-line line-number" line="15">    <span class="token punctuation">]</span>
-</span><span class="code-line line-number" line="16">  <span class="token punctuation">]</span>
-</span><span class="code-line line-number" line="17"><span class="token punctuation">}</span>
+</span><span class="code-line line-number" line="5">        <span class="token property">"extension"</span><span class="token operator">:</span> <span class="token string">"js"</span><span class="token punctuation">,</span>
+</span><span class="code-line line-number" line="6">        <span class="token property">"replace"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+</span><span class="code-line line-number" line="7">        <span class="token property">"skipUnlistedExtensions"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+</span><span class="code-line line-number" line="8">        <span class="token property">"observedScriptExtensions"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"js"</span><span class="token punctuation">,</span> <span class="token string">"ts"</span><span class="token punctuation">,</span> <span class="token string">"jsx"</span><span class="token punctuation">,</span> <span class="token string">"tsx"</span><span class="token punctuation">,</span> <span class="token string">"mjs"</span><span class="token punctuation">,</span> <span class="token string">"cjs"</span><span class="token punctuation">]</span>
+</span><span class="code-line line-number" line="9">      <span class="token punctuation">}</span>
+</span><span class="code-line line-number" line="10">    <span class="token punctuation">]</span>
+</span><span class="code-line line-number" line="11">  <span class="token punctuation">]</span>
+</span><span class="code-line line-number" line="12"><span class="token punctuation">}</span>
 </span></code><input type="hidden" value="{
   &#x22;plugins&#x22;: [
     [
       &#x22;@uiw/babel-plugin-add-import-extension&#x22;, {
-        // Add .js extension to all imports and exports
         &#x22;extension&#x22;: &#x22;js&#x22;,
-        // By default, if a declaration file already has an extension, it is preserved. Extensions are added to declaration files that do not have one.
         &#x22;replace&#x22;: true,
-        // If set to &#x60;true&#x60; and a declaration file has an extension that is *not* included in the &#x60;observedScriptExtensions&#x60; list, the file will be skipped.
         &#x22;skipUnlistedExtensions&#x22;: true,
-        // Declaration files with extensions present in this list are considered for extension replacement (based on the &#x60;replace&#x60; option).
-        // Files with extensions *not* in this list will have the &#x60;extension&#x60; option&#x27;s value appended to them.
         &#x22;observedScriptExtensions&#x22;: [&#x22;js&#x22;, &#x22;ts&#x22;, &#x22;jsx&#x22;, &#x22;tsx&#x22;, &#x22;mjs&#x22;, &#x22;cjs&#x22;]
       }
     ]
