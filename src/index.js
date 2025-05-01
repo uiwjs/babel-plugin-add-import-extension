@@ -38,7 +38,11 @@ const skipModule = (module, { replace, extension, skipUnlistedExtensions, observ
   const moduleExtension = extname(module).toLowerCase();
   const moduleExtensionWithoutDot = moduleExtension.replace(/^\./, '');
   // If the module's extension is not in the list of observed script extensions, skip it
-  if (skipUnlistedExtensions == true && !observedScriptExtensions.includes(moduleExtensionWithoutDot)) {
+  if (
+    skipUnlistedExtensions == true 
+    && moduleExtension != ""
+    && !observedScriptExtensions.includes(moduleExtensionWithoutDot)
+  ) {
     return true;
   }
 
