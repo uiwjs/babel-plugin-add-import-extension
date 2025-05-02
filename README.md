@@ -53,14 +53,17 @@ Via `.babelrc` or `babel-loader`.
 // Input Code
 import './';
 import './main';
+import png from './logo.png';
 import { Button } from 'uiw';
 import { Select } from '@uiw/core';
+export { oneBackLevel } from '..';
 
 // Output   ↓ ↓ ↓ ↓ ↓ ↓
 import './index.js';
 import './main.js';
 import { Button } from 'uiw';
 import { Select } from '@uiw/core';
+export { oneBackLevel } from "../index.js";
 ```
 
 Output Result
@@ -70,8 +73,11 @@ Output Result
 - import './main';
 + import './index.js';
 + import './main.js';
+import png from './logo.png';
 import { Button } from 'uiw';
 import { Select } from '@uiw/core';
+- export { oneBackLevel } from '..';
++ export { oneBackLevel } from "../index.js";
 ```
 
 ## Options
